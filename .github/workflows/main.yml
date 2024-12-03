@@ -22,7 +22,7 @@ jobs:
         with:
           runCmd: |
             echo "127.0.0.1 to-dos.local.tourmalinecore.internal" | sudo tee -a /etc/hosts
-            curl http://to-dos.local.tourmalinecore.internal:40080/api/to-dos-api/to-dos/
+            cat /etc/hosts
             ls
         
 
