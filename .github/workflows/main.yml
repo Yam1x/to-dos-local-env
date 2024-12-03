@@ -23,6 +23,5 @@ jobs:
           runCmd: |
             echo "127.0.0.1 to-dos.local.tourmalinecore.internal" | sudo tee -a /etc/hosts
             cat /etc/hosts
-            ls
         
 
