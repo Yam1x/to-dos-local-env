@@ -25,6 +25,7 @@ jobs:
             helmfile cache cleanup && helmfile --environment local --namespace local -f deploy/helmfile.yaml apply 
             npm ci --prefix ./to-dos-ui
             npm run start-local-env --prefix ./to-dos-ui
-
+            npm run cypress:run:e2e:local-env --prefix ./to-dos-ui
+ 
  
 
