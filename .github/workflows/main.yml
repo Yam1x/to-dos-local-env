@@ -23,9 +23,7 @@ jobs:
           runCmd: |
             echo "127.0.0.1 to-dos.local.tourmalinecore.internal" | sudo tee -a /etc/hosts
             kind create cluster --name to-dos --config kind-local-config.yaml --kubeconfig ./.to-dos-cluster-kubeconfig
-            helmfile cache cleanup && helmfile --environment local --namespace local -f deploy/helmfile.yaml apply
+            helmfile cache cleanup && helmfile --environment local --namespace local -f deploy/helmfile.yaml apply\
+            ls
  
-      - name: check dir
-        run: ls
-        
 
