@@ -21,7 +21,8 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           runCmd: |
+            kind create cluster --name to-dos --config kind-local-config.yaml --kubeconfig ./.to-dos-cluster-kubeconfig
             echo "127.0.0.1 to-dos.local.tourmalinecore.internal" | sudo tee -a /etc/hosts
-            cat /etc/hosts
+            curl http://to-dos.local.tourmalinecore.internal:40080/api/to-dos-api/api
         
 
