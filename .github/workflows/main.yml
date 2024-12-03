@@ -11,6 +11,11 @@ jobs:
       - name: Checkout 
         uses: actions/checkout@v3
 
+      - name: Checkout UI
+        uses: actions/checkout@v3
+        with:
+          repository: Yam1x/to-dos-ui
+        
       - name: Install devcontainers
         uses: devcontainers/ci@v0.3
         with:
