@@ -19,6 +19,8 @@ jobs:
       - name: Install devcontainers
         uses: devcontainers/ci@v0.3
         with:
-          runCmd: echo hi
+          runCmd: |
+            echo "127.0.0.1 to-dos.local.tourmalinecore.internal" | sudo tee -a /etc/hosts
+            ls
         
 
