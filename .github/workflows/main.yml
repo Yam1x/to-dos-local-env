@@ -14,8 +14,7 @@ jobs:
       - name: Checkout UI
         uses: actions/checkout@v3
         with:
-          repository: Yam1x/to-dos-ui
-          path: to-dos-ui
+          runCmd: git clone https://github.com/Yam1x/to-dos-ui.git
         
       - name: Install devcontainers
         uses: devcontainers/ci@v0.3
